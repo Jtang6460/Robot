@@ -125,7 +125,7 @@ while stopSignDetected == 0 and aprilTagDetected == 0 and shapeDetected == 0:
             imageData = imageData + data
 
     x = imageData.find('stop sign')
-
+    print(x)
     if x == -1:
         print 'stop sign not found!'
     else:
