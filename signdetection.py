@@ -124,12 +124,12 @@ while stopSignDetected == 0 and aprilTagDetected == 0 and shapeDetected == 0:
                        tag.confidence * 100))
             imageData = imageData + data
 
-    x = imageData.find('stop sign')
+    x = imageData.find('stop')
     print(imageData)
     if x == -1:
         print 'stop sign not found!'
     else:
-        y = imageData[x + 27:x + 29]
+        y = imageData[x + 22:x + 24]
         print y
         z = int(y)
         if z > 70:
