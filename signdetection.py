@@ -67,6 +67,7 @@ import subprocess
 from PIL import Image
 import sys
 import time
+import re
 
 subscription_key = '27881906babf49308ac55dacf12b427d'
 endpoint = 'https://stopsignproject.cognitiveservices.azure.com/'
@@ -121,7 +122,7 @@ while stopSignDetected == 0 and aprilTagDetected == 0 and shapeDetected == 0:
         imageData = ''
         for tag in tags_result_remote.tags:
             data = str("'{}' with confidence {:.2f}%".format(tag.name,
-                       tag.confidence * 100))
+                       tag.confidence))
             imageData = imageData + data
 
     x = imageData.find("'stop'")
@@ -129,10 +130,10 @@ while stopSignDetected == 0 and aprilTagDetected == 0 and shapeDetected == 0:
     if x == -1:
         print 'stop sign not found!'
     else:
-        y = imageData[x + 23:x + 25]
+        y = imageData[x:x+50]
         print y
-        z = int(y)
-        if z > 10:
+        int(y) = re.sub('[^0-9]', '', string[x:x+50])
+        if y > 10:
             print 'Stop Sign found!'
             stopSignDetected = 1
     img_counter += 1
