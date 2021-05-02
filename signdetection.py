@@ -86,7 +86,7 @@ shapeDetected = 0
 Motor.MotorRun(0, 'forward', 100)
 Motor.MotorRun(1, 'forward', 100)
 img_counter = 0
-while stopSignDetected == 0 or aprilTagDetected == 0 or shapeDetected == 0:
+while stopSignDetected == 0 and aprilTagDetected == 0 and shapeDetected == 0:
 
     # start photo stream !!!!!!
 
