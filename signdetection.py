@@ -132,8 +132,9 @@ while stopSignDetected == 0 and aprilTagDetected == 0 and shapeDetected == 0:
     else:
         y = imageData[x:x+50]
         print y
-        int(y) = re.sub('[^0-9]', '', string[x:x+50])
-        if y > 10:
+        y = re.sub('[^0-9]', '', string[x:x+50])
+        z = int(y)
+        if z > 10:
             print 'Stop Sign found!'
             stopSignDetected = 1
     img_counter += 1
