@@ -132,7 +132,7 @@ while stopSignDetected == 0 and aprilTagDetected == 0 and shapeDetected == 0:
     else:
         y = imageData[x:x+50]
         print y
-        y = re.sub('[^0-9]', '', y[x:x+50])
+        y = re.sub('[^0-9]', '', y)
         print("hi")
         print (y)
         z = int(y)
