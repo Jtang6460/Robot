@@ -86,13 +86,12 @@ shapeDetected = 0
 Motor.MotorRun(0, 'forward', 100)
 Motor.MotorRun(1, 'forward', 100)
 img_counter = 0
-while stopSignDetected == 0 or aprilTagDetected == 0 or shapeDetected \
-    == 0:
+while stopSignDetected == 0 or aprilTagDetected == 0 or shapeDetected == 0:
 
     # start photo stream !!!!!!
 
     command = \
-        'fswebcam -r 1280x720 --no-banner --flip h ./{}.jpg '.format(img_counter)
+        'fswebcam -r 1280x720 --no-banner --flip v ./{}.jpg '.format(img_counter)
     os.system(command)
 
     command1 = 'git add {}.jpg'.format(img_counter)
@@ -130,7 +129,7 @@ while stopSignDetected == 0 or aprilTagDetected == 0 or shapeDetected \
     if x == -1:
         print 'stop sign not found!'
     else:
-        y = str[x + 27:x + 29]
+        y = imageData[x + 27:x + 29]
         print y
         z = int(y)
         if z > 90:
