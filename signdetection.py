@@ -91,7 +91,7 @@ while stopSignDetected == 0 and aprilTagDetected == 0 and shapeDetected == 0:
     # start photo stream !!!!!!
 
     command = \
-        'fswebcam -r 1280x720 --no-banner --flip v ./{}.jpg '.format(img_counter)
+        'fswebcam -r 1280x720 --no-banner --flip h,v ./{}.jpg '.format(img_counter)
     os.system(command)
 
     command1 = 'git add {}.jpg'.format(img_counter)
