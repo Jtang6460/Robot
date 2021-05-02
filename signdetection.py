@@ -133,6 +133,8 @@ while stopSignDetected == 0 and aprilTagDetected == 0 and shapeDetected == 0:
         y = imageData[x:x+50]
         print y
         y = re.sub('[^0-9]', '', y[x:x+50])
+        print("hi")
+        print (y)
         z = int(y)
         if z > 5000:
             print 'Stop Sign found!'
