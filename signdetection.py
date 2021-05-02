@@ -132,7 +132,7 @@ while stopSignDetected == 0 and aprilTagDetected == 0 and shapeDetected == 0:
         y = imageData[x + 27:x + 29]
         print y
         z = int(y)
-        if z > 90:
+        if z > 70:
             print 'Stop Sign found!'
             stopSignDetected = 1
     img_counter += 1
