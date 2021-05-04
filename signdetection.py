@@ -76,6 +76,8 @@ computervision_client = ComputerVisionClient(endpoint,
         CognitiveServicesCredentials(subscription_key))
 
 # testbench
+command4 = 'python clean.py'
+os.system(command4)
 
 Motor = MotorDriver()
 stopSignDetected = 0
