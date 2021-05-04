@@ -84,8 +84,8 @@ shapeDetected = 0
 
   # command to run servos !
 
-Motor.MotorRun(0, 'forward', 30)
-Motor.MotorRun(1, 'forward', 30)
+Motor.MotorRun(0, 'forward', 25)
+Motor.MotorRun(1, 'forward', 25)
 img_counter = 0
 while stopSignDetected == 0 and aprilTagDetected == 0 and shapeDetected == 0:
 
