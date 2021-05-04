@@ -124,7 +124,7 @@ while stopSignDetected == 0 and aprilTagDetected == 0 and shapeDetected == 0:
                        tag.confidence * 100))
             imageData = imageData + data
 
-    object = imageData.find("'cartoon'")
+    object = imageData.find("'person'")
     print(imageData)
     if object == -1:
         print 'stop sign not found!'
