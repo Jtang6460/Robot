@@ -134,7 +134,7 @@ while stopSignDetected == 0 and aprilTagDetected == 0 and shapeDetected == 0:
     else:
         confidence = re.sub('[^0-9]', '', imageData[object:object+50])
         Value = int(confidence)
-        if Value > 8000:
+        if Value > 6000:
             print 'Stop Sign found!'
             stopSignDetected = 1
     img_counter += 1
